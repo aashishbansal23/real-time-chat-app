@@ -1,4 +1,5 @@
-export const host = "http://localhost:5000";
+// export const host = "http://localhost:5000"; // For local
+export const host = "https://chat-app-aashish.herokuapp.com/"; // For Deployment
 export const registerRoute = `${host}/api/auth/register`;
 export const loginRoute = `${host}/api/auth/login`;
 export const setAvatarRoute = `${host}/api/auth/setavatar`;
