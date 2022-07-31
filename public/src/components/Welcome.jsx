@@ -5,25 +5,38 @@ import Robot from "../assets/robot.gif";
 export default function Welcome({ currentUser }) {
   return (
     <Container>
-      <img src={Robot} alt="Robot" />
-      <h1>
-        Welcome, <span>{currentUser.username}!</span>
-      </h1>
-      <h3>Please select a chat to Start Messaging.</h3>
+      <div className="logout">
+        <Logout />
+      </div>
+      <div className="welcome">
+        <img src={Robot} alt="Robot" />
+        <h1>
+          Welcome, <span>{currentUser.username}!</span>
+        </h1>
+        <h3>Please select a chat to Start Messaging.</h3>
+      </div>
     </Container>
   );
 }
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  img {
-    height: 20rem;
+  .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    img {
+      height: 20rem;
+    }
+    span {
+      color: #4e0eff;
+    }
   }
-  span {
-    color: #4e0eff;
+  .logout {
+    display: flex;
+    direction: rtl;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 `;
